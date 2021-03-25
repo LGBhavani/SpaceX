@@ -9,3 +9,5 @@ Then based on search filters, it displays the launches of the program.
 Here async fetch function is used to get the api and render data.
 
 Performance Score,SEO and Accesibility is checked using Lighthouse Score and same is added as screenshot file for reference.
+
+To run the code, we can use Visual Studio Code and run the index.html with Live Server.

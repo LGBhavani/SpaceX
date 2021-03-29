@@ -42,21 +42,9 @@ function launchSuccess() {
     launched = "true";
     getapi(api_url);
 }
-function launchFailure() {
-    if (launched === "true") {
-        launched = "";
-    } else {
-        launched = "false";
-    }
-    getapi(api_url);
-}
+
 function landingSuccess() {
     landed = "true";
-    getapi(api_url);
-}
-
-function landingFail() {
-    landed = "false";
     getapi(api_url);
 }
 
@@ -73,7 +61,7 @@ function show(data) {
         <div><p><b>Mission Ids:</b> </p></div>
         <div><p><b>Launch Year:</b> ${r.launch_year}</p></div>
         <div><p><b>Successful Launch:</b> ${r.launch_success}</p></div>
-        <div><p><b>Successful Landing:</b>${r.rocket.first_stage["cores"][0].land_success}</p></div>
+        <div><p><b>Successful Landing:</b>${r.rocket.first_stage["cores"][0].land_success!== null ? r.rocket.first_stage["cores"][0].land_success : "None"}</p></div>
         </div>`;
     }
     if (launch_years_array.length == 0) {

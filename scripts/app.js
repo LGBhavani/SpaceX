@@ -73,7 +73,7 @@ function show(data) {
         <div><p><b>Mission Ids:</b> </p></div>
         <div><p><b>Launch Year:</b> ${r.launch_year}</p></div>
         <div><p><b>Successful Launch:</b> ${r.launch_success}</p></div>
-        <div><p><b>Successful Landing:</b> </p></div>
+        <div><p><b>Successful Landing:</b>${r.rocket.first_stage["cores"][0].land_success}</p></div>
         </div>`;
     }
     if (launch_years_array.length == 0) {
